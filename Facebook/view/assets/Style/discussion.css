@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border:none;
+    font-family: 'Poppins';
+}
+html{
+    scroll-behavior:smooth ;
+}
+
+::-webkit-scrollbar{
+    display: initial;
+    height: 6px;
+    width: 6px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+::-webkit-scrollbar:hover{
+    height: 12px;
+    width: 12px;
+}
+::-webkit-scrollbar-track{
+    /* background: #f1f1f1; */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #555;
+}
+::-webkit-scrollbar-button{
+    display: none;
+}
+body{
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #eee;
+}
+body .left1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+body .left1 .bar li{
+    margin-bottom: 30px;   
+    font-size: 14px;
+}
+body .left1 .bar li a{
+    padding: 10px;
+    color: #333;
+    background: #e6e5e5;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+body .left1 .bar li:nth-child(1) a{
+    background:linear-gradient(45deg,#0fd8b7,#9ae061,#42f8b2) ;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 19px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+body .left1 .bar li:nth-child(4) a{
+    color: #41af73;
+}
+body .left1 .bar li:nth-child(3) a{
+    color: #416daf;
+}
+body .left1 .bar li:nth-child(5) a{
+    color: #ff9408;
+}
+body .left1 .person li{
+    margin-bottom: 10px;
+}
+body .left1 .person li a{
+    font-size: 15px;
+    padding: 10px;
+    color: #ff2003;
+    background: #e6e5e5;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+body .left1 .person li img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    color: #333;
+    background: #e6e5e5;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+body .right1{
+    width: 100vw;
+    height: 100%;
+    background: #fff;
+    margin-top: 10px;
+    border-radius: 9px;
+    box-shadow: 0 0 10px #ccc;
+    overflow: hidden;
+    display: flex;
+
+}
+/* body .right1 p span{
+    background:linear-gradient(45deg,#0fd8b7,#9ae061,#42f8b2) ;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'mommy';
+}
+body .right1 p {
+    padding: 1px 10px;
+    color: #333;
+    font-size: 25px;
+    font-weight: bold;
+} */
+body .right1 .discuss{
+    width: 35%;
+    padding: 20px;
+    height: 100%;
+    border-right: 1px solid #ccc;
+    overflow: hidden;
+    
+
+}
+body .right1 .discuss .top{
+    display: flex;
+    flex-direction: column;
+}
+body .right1 .discuss .top h2{
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+body .right1 .discuss .top .search{
+    position: relative;
+}
+body .right1 .discuss .top .search input{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-bottom: 4px solid #0fd8b7;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 35px;
+    border-radius: 8px;
+}
+body .right1 .discuss .top .search i{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%) translateX(40%);
+    color: #333;
+
+}
+/* body .right1 .discuss .bottom:hover::-webkit-scrollbar{
+    width: 12px;
+    height: 12px;
+} */
+body .right1 .discuss .bottom{
+    margin-top: 10px;
+    padding: 5px;
+    width:100%;
+    height: 85vh;
+    overflow-y:auto ;
+    scrollbar-width: 12px;
+    
+}
+body .right1 .discuss .bottom .content{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 10px 10px;
+}
+body .right1 .discuss .bottom .content:hover{
+    background: #eee;
+}
+body .right1 .discuss .bottom .content img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border-radius: 50%;
+}
+body .right1 .discuss .bottom .content .mess h4{
+    font-size: 12px;
+    color: #333;
+    font-weight: bold;
+}
+body .right1 .discuss .bottom .content .mess p{
+    font-size: 12px;
+    color: #333;
+}
+body .right1 .left{
+    position: relative;
+    width: calc(100vw - 35%);
+    background: url('../bg/v1045-06a.jpg');
+}
+body .right1 .left::before{
+    content: '';
+    position:absolute ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff9c;
+    z-index: 1;
+}
+body .right1 .left .container{
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+}
+body .right1 .left .container .cont{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+body .right1 .left .container .cont img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border-radius: 50%;
+}
+body .right1 .left .container h2{
+    font-size: 15px;
+    color: #555;
+}
+body .right1 .left .container i{
+    position: relative;
+    font-size: 16px;
+    cursor: pointer;
+}
+body .right1 .left .message{
+    position: absolute;
+    bottom: 2%;
+    background: #fff;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 10px 20px 10px;
+    box-shadow: 0 0 10px #ccc;
+    gap: 10px;
+}
+body .right1 .left .message .i{
+    font-size: 15px;
+    padding: 10px;
+
+}
+body .right1 .left .message .i:hover{
+    border-radius: 50%;
+    background: #eee;
+    cursor: pointer;
+}
+body .right1 .left .message button{
+    font-size: 15px;
+    padding: 2px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #eee;
+}
+body .right1 .left .message button:hover{
+    border-radius: 8px;
+    cursor: pointer;
+    background: #ccc;
+
+}
+body .right1 .left .message textarea{
+    width: 100%;
+    height: 20px;
+    resize: none;
+}
+body .right1 .left .not{
+    position: absolute;
+    z-index: 10;
+    width: calc(100% - 2%);
+    height: 100%;
+    top: 10%;
+    left: 2%;
+    overflow-y: auto;
+}
+
+body .right1 .left .not  .message1{
+    height: fit-content;
+    margin-top: 10px;
+    border-radius: 9px;
+    background: #fff;
+    padding: 10px;
+    width: 90%;
+    box-shadow: 0 0 10px #ccc;
+}
+body .right1 .left .not  .message2{
+    height: fit-content;
+    margin-top: 10px;
+    border-radius: 9px;
+    background: #ccc;
+    padding: 10px;
+    width: 60%;
+    box-shadow: 0 0 10px #ccc;
+}
+img{
+    width: 75px;
+}

@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+    user-select: none;
+    border: 0;
+    transition: 0.7s;
+    outline: none;
+}
+html{
+    scroll-behavior: smooth;
+    /* font-size: 62.5%; */
+}
+body{
+    background: url('../bg/bg7.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body .connexion{
+    width: 400px;
+    margin-top: 150px;
+    background: #ffffffa2;
+    padding: 20px;
+    border-radius: 9px;
+}
+body .connexion .logo{
+    display: flex;
+    justify-content: space-between;
+}
+body .connexion .logo .right{
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
+
+body .connexion .logo .right i{
+    background:linear-gradient(45deg,#0fd8b7,#9ae061,#42f8b2) ;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 35px;
+    font-weight: bolder;
+}
+body .connexion .logo .right p span{
+    background:linear-gradient(45deg,#0fd8b7,#9ae061,#42f8b2) ;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 35px;
+    font-weight: bolder;
+    font-family: 'mommy';
+}
+body .connexion .logo .right p {
+    
+    color: #333;
+    font-size: 25px;
+    font-weight: bold;
+}
+body .connexion .logo .left{
+    display: flex;
+    align-items: center;
+    
+}
+body .connexion .logo .left h2{
+    color: #333;
+    font-size: 20px;
+    background: #b7e29460;
+    padding: 5px 20px ;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+}
+body .connexion .content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+body .connexion .content i{
+    position: absolute;
+    bottom: 0;
+    transform: translateY(-90%);
+    right: 10px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+body .connexion .content label{
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #333;
+}
+body .connexion .content input{
+    /* width: 100%; */
+    background: #fff;
+    height: 40px;
+    border-radius: 9px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+body .connexion .form form button{
+    /* width: 100%; */
+    background: linear-gradient(45deg,#0fd8b7,#42f8b2,#dbffbe);
+    border-radius: 9px;
+    padding:    10px 20px ;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all width 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+body .connexion .form form button:hover{
+    /* width: 100%; */
+    background: #0ba78d;
+    cursor: pointer;
+    transition: all width 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+body .p{
+    color: #fff;
+    margin-top: 20px;
+}
+body .push{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+body .push p {
+    color: #333;
+}
+body .push p a{
+    color: #0fd8b7;
+    cursor: pointer;
+}

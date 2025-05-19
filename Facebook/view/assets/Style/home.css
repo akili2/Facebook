@@ -1,0 +1,473 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+    user-select: none;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+::-webkit-scrollbar{
+    display: initial;
+    height: 6px;
+    width: 6px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+::-webkit-scrollbar:hover{
+    height: 12px;
+    width: 12px;
+}
+::-webkit-scrollbar-track{
+    /* background: #f1f1f1; */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #555;
+}
+::-webkit-scrollbar-button{
+    display: none;
+}
+html{
+    scroll-behavior: smooth;
+    /* font-size: 62.5%; */
+}
+body{
+    position: relative;
+    background: #eee;
+}
+
+/* ==============TRAITEMENT NAVBAR=============================== */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.navbar .logo,.navbar .person{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+.navbar .bar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.navbar .logo .logo2{
+    background:linear-gradient(45deg,#0fd8b7,#9ae061,#42f8b2) ;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 25px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.navbar .logo p span{
+    background:linear-gradient(45deg,#0fd8b7,#9ae061,#42f8b2) ;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 35px;
+    font-weight: bolder;
+    font-family: 'mommy';
+}
+.navbar .logo p {
+    
+    color: #333;
+    font-size: 25px;
+    font-weight: bold;
+}
+.navbar .logo i:nth-child(3){
+    cursor: pointer;
+    color: #333;
+    background: #eee;
+    padding: 10px;
+    border-radius: 50%;
+}
+.navbar .bar i{
+    color: #333;
+    transition:all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1) ;
+}
+
+.navbar .bar i:hover{
+    color: #0fd8b7;
+    transition:all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1) ;
+}
+.navbar .person i{
+    color: #333;
+    background: #eee;
+    padding: 10px;
+    border-radius: 50%;
+    transition:all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1) ;
+
+}
+.navbar .person i:hover{
+    cursor: pointer;
+    color: #333;
+    background: #dbdbdb;
+    padding: 10px;
+    border-radius: 50%;
+    transition:all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1) ;
+
+}
+.navbar .person li:last-child{
+    padding: 2px;
+    background: #eee;
+    border-radius: 50%;
+}
+.navbar .person li:last-child img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* ========Traitemnt section pub================ */
+
+.pub{
+    display: flex;
+    width: 90vw;
+    margin:  110px auto auto auto;
+}
+.pub .left{
+    width: 50%;
+    overflow-y: auto;
+}
+.pub .left .publier{
+    display: flex;
+    flex-direction:column ;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+
+}
+.pub .left .publier .profil{
+    padding-bottom:5px ;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    border-bottom:1px solid #eee;
+}
+.pub .left .publier .profil img{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+.pub .left .publier .profil input{
+    background: #eee;
+    width: 100%;
+    height: 30px;
+    padding-left: 20px;
+    border-radius: 25px;
+}
+.pub .left .publier .content{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+.pub .left .publier .content i:nth-child(1){
+    color: #d82d0f;
+}
+.pub .left .publier .content i:nth-child(2){
+    color: #0fd8b7;
+}
+.pub .left .publier .content i:nth-child(3){
+    color: #dddf6f;
+}
+.pub .left .create{
+    margin-top:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:row ;
+    background: #fff;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+
+}
+.pub .left .create i{
+    padding: 10px;
+    border-radius: 50%;
+    background: #eeee;
+    color: #333;
+}
+.pub .left .create .text{
+    display: flex;
+    flex-direction: column;
+}
+.pub .left .create .text h2{
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+}
+.pub .left .create .text p{
+    font-size: 14px;
+    color: #333;
+}
+.pub .left .invitation{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction:column ;
+    overflow-x: hidden;
+    background: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+.pub .left .invitation .users{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.pub .left .invitation .users .box{
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 15px;
+    gap: 10px;
+}
+.pub .left .invitation .users .left{
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 12px;
+    gap: 10px;
+}
+
+.pub .left .invitation .container{
+    position: relative;
+    overflow: hidden;
+
+    width: 100vw;
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+.pub .left .invitation  .i{
+    
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 35px;
+    text-shadow: 0 0 10px #ccc;
+    transform: translateY(-50%);
+    color: #333;
+    z-index: 10;
+    cursor: pointer;
+
+}
+.pub .left .invitation .container .image{
+    width: 200px;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.pub .left .invitation .container .image img{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+.pub .left .invitation .container h2{
+    font-size: 14px;
+    padding: 10px;
+}
+.pub .left .invitation .container .content{
+    padding: 10px;
+    font-size: 12px;
+
+}
+.pub .left .invitation .container .content button{
+    padding: 5px 10px;
+    cursor: pointer;
+    background: #9ae061;
+    border-radius: 8px;
+    color: #fff;
+}
+.pub .left .invitation .boite{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pub .left .invitation .boite a{
+    color: #9ae061;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+
+.pub .left .public{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+.pub .left .public .head{
+    padding: 10px;
+    position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+.pub .left .public .head .leftii{
+    display: flex;
+    gap: 10px;
+}
+.pub .left .public .head .leftii img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+.pub .left .public .head .leftii h3{
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+.pub .left .public .head .rightii i{
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+.pub .left .public .desc{
+    padding: 10px;
+}
+.pub .left .public .desc p{
+    color: #333;
+    font-size: 15px;
+}
+.pub .left .public .ima{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+.pub .left .public .like{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+.pub .left .public .like .boxi{
+    display: flex;
+    justify-content: space-between;
+}
+.pub .left .public .like .boxi .lefti{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.pub .left .public .like .boxi .lefti i{
+    color: #ff0808;
+    font-size: 15px;
+}
+.pub .left .public .like .boxi .lefti p{
+    font-size: 13px;
+    color: #333;
+    font-weight: bold;
+}
+.pub .left .public .like .boxi .righti p{
+    font-size: 13px;
+    color: #333;
+    font-weight: bold;
+}
+.pub .left .public .likes{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pub .left .public .likes .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #333;
+    background: #eee;
+    padding: 3px 10px;
+    border-radius: 8px;
+}
+.pub .left .public .likes .content i,.pub .left .public .likes .content p{
+    font-size: 15px;
+    font-weight: bold;
+}
+.pub .right{
+    position:fixed;
+    right: 50px;
+    width: 30%;
+    overflow-y: auto;
+}
+.pub .right .actualite{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #fcfbfb;
+    padding: 20px;
+    border-radius: 8px;
+    border-bottom: 1px solid #ccc;
+}
+.pub .right .actualite h2{
+    color: #333;
+    font-size: 19px;
+    font-weight: bold;
+}
+.pub .right .actualite .actu{
+    height: 50vh;
+    overflow-y: auto;
+}
+.pub .right .actualite .actu .content{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.pub .right .actualite .actu .content img{
+    width: 170px;
+    height: 130px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border-radius: 9px;
+}
+.pub .right .actualite .actu .content h3{
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+.pub .right .actualite .pi{
+
+    font-weight: bold;
+    margin-top: 30px;
+}
